@@ -273,16 +273,11 @@ void _sensor_start_cb(void *data, Evas_Object *obj, void *event_info) {
 }
 
 void _sensor_stop_cb(void *data, Evas_Object *obj, void *event_info) {
+	//stop HRM SENSOR
 	int error = sensor_listener_unset_event_cb(listener);
 	if (error != SENSOR_ERROR_NONE) {
 		dlog_print(DLOG_ERROR, LOG_TAG,
 				"sensor_listener_unset_event_cb error: %d", error);
-	}
-
-	int error1 = sensor_listener_unset_event_cb(listener1);
-	if (error1 != SENSOR_ERROR_NONE) {
-		dlog_print(DLOG_ERROR, LOG_TAG,
-				"sensor_listener_unset_event_cb error: %d", error1);
 	}
 
 	error = sensor_listener_stop(listener);
@@ -290,17 +285,26 @@ void _sensor_stop_cb(void *data, Evas_Object *obj, void *event_info) {
 		dlog_print(DLOG_ERROR, LOG_TAG, "sensor_listener_stop error: %d",
 				error);
 	}
-	error1 = sensor_listener_stop(listener1);
-	if (error != SENSOR_ERROR_NONE) {
-		dlog_print(DLOG_ERROR, LOG_TAG, "sensor_listener_stop error: %d",
-				error1);
-	}
 
 	error = sensor_destroy_listener(listener);
 	if (error != SENSOR_ERROR_NONE) {
 		dlog_print(DLOG_ERROR, LOG_TAG, "sensor_destroy_listener error: %d",
 				error);
 	}
+
+	//stop PEDOMETER SENSOR
+	int error1 = sensor_listener_unset_event_cb(listener1);
+	if (error1 != SENSOR_ERROR_NONE) {
+		dlog_print(DLOG_ERROR, LOG_TAG,
+				"sensor_listener_unset_event_cb error: %d", error1);
+	}
+
+	error1 = sensor_listener_stop(listener1);
+	if (error != SENSOR_ERROR_NONE) {
+		dlog_print(DLOG_ERROR, LOG_TAG, "sensor_listener_stop error: %d",
+				error1);
+	}
+
 	error1 = sensor_destroy_listener(listener1);
 	if (error1 != SENSOR_ERROR_NONE) {
 		dlog_print(DLOG_ERROR, LOG_TAG, "sensor_destroy_listener error: %d",
