@@ -23,6 +23,7 @@ void minusCb(void *data, Evas_Object *obj, void *event_info) {
 		elm_object_text_set(text, a);
 	}
 }
+
 void plusCb(void *data, Evas_Object *obj, void *event_info) {
 	if (target < 3) {
 		target++;
