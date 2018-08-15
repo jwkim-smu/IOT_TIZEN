@@ -22,6 +22,9 @@ extern int check_state1;
 extern int check_state2;
 extern float f, p, q;
 
+sensor_listener_h listener;
+sensor_listener_h listener1;
+
 char* tizenID(void) {
 	char *value;
 	int ret;
@@ -156,6 +159,7 @@ void on_sensor_event(sensor_h sensor, sensor_event_s *event, void *user_data) {
 		char tmpLine2[100] = "";
 		char tmpLine3[100] = "";
 		char tmp3[100]= "";
+
 		if (type == SENSOR_HRM) {
 			/////////////////heartrate///////////////////
 			dlog_print(DLOG_INFO, LOG_TAG,
@@ -165,6 +169,7 @@ void on_sensor_event(sensor_h sensor, sensor_event_s *event, void *user_data) {
 			sprintf(tmpLine2,
 					"<align=center><font_size=20>%d - %.2f</font_size></align>",
 					start, event->values[0]);
+
 			sprintf(tmpLine3, "%.2f", event->values[0]);
 			elm_object_text_set(event_label, tmpLine2);
 			dlog_print(DLOG_DEBUG, LOG_TAG, "%s", tmpLine3);
@@ -570,4 +575,3 @@ int main(int argc, char *argv[]) {
 
 	return ret;
 }
-

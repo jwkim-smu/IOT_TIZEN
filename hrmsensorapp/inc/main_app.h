@@ -84,9 +84,6 @@ Evas_Object *bt1, *bt;
 Evas_Object *check1;
 Evas_Object *check2;
 
-sensor_listener_h listener;
-sensor_listener_h listener1;
-
 char* tizenID(void);
 static void app_get_data(const char *res_file_in, char *res_path_out, int res_path_max);
 static void write_file(char* filepath, char* buf);
