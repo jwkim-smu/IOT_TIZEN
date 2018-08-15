@@ -1,9 +1,7 @@
 # IOT_TIZEN
 
-/* 
  *  Created on: June 01, 2018
  *  Author: Jong Hyun Lim, Su Mee Moon
- */
  
 #개요 : 
 IOT 장비와 해당 내장 센서를 활용하여 심박 수와 걸음 수 데이터를 측정하고 수집하여 
