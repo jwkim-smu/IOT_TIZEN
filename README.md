@@ -14,7 +14,7 @@ IOT 장비와 해당 내장 센서를 활용하여 심박 수와 걸음 수 데�
 
 #사용 센서 : Heart Rate Monitor Sensor, Pedometer Sensor
 
-#저장 형태 : <TizenID TimeStamp Heartrate Step>
+#저장 형태 : "TizenID TimeStamp Heartrate Step"
 
 #개발 환경 : TIZEN STUDIO(FOR GEAR S3 APP PROGRAMMING), ECLIPSE(FOR SERVER & PROGRAMMING)
 
