@@ -236,24 +236,6 @@ void on_sensor_event(sensor_h sensor, sensor_event_s *event, void *user_data) {
 //			strcpy(tmpLine,"");
 //			strcpy(tmpLine2,"");
 //		}
-//	if (type == SENSOR_HUMAN_PEDOMETER) {//mobile only sensor, when system rebooted, steps will be detected from
-//		///////////////////Step//////////////////////
-//		dlog_print(DLOG_INFO, LOG_TAG,
-//				"<align=center><font_size=20>%.2f</font_size></align>",
-//				event->values[0]);
-//
-//		sprintf(tmpLine4,
-//				"<align=center><font_size=20>%.2f</font_size></align>",
-//				event->values[0]);
-//		sprintf(tmpLine5, "%.2f", event->values[0]);
-//		elm_object_text_set(event_label1, tmpLine4);
-//		dlog_print(DLOG_INFO, LOG_TAG, "%s", tmpLine5);
-//
-//		SM3(tmpLine5);
-//
-//	}
-//	write_sensor(tmpLine3, tmpLine5);
-//	write_file(filepath, "\t");
 	}
 }
 
