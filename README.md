@@ -1,7 +1,7 @@
 # IOT_TIZEN
 
  *  Created on: June 01, 2018
- *  Author: Jong Hyun Lim, Su Mee Moon
+ *  Author: Jong Hyun Lim, Su Mee Moon, Tae su Kim
  
 #개요 : 
 IOT 장비와 해당 내장 센서를 활용하여 심박 수와 걸음 수 데이터를 측정하고 수집하여 
@@ -21,3 +21,5 @@ IOT 장비와 해당 내장 센서를 활용하여 심박 수와 걸음 수 데�
 #개발 기간 : 2018.06.01 ~ 2018.08.31
 
 #참고 자료 : https://developer.tizen.org/ko?langredirect=1
+
+#한 계  : 두 센서를 모두 선택하여 측정할 시, 특정 한 센서의 측정값이 올바르게 나오지 않는 경우가 발생, Pedometer 센서 측정값의 불규칙적인 등장하는 문제 발생, txt파일 저장 형태가 
