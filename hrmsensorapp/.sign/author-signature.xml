@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="bin%2Fhrmsensorapp">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>MaUJzqc9S6BRtZTgMdnn4wmlL8twzg1RIrMk/v6JT/o=</DigestValue>
+<DigestValue>lxdBudQIBr2frKJCTDM7huvZ1LlNLYxmvZieWPiNfo8=</DigestValue>
 </Reference>
 <Reference URI="shared%2Fres%2Fbasicui2.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -27,11 +27,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Z2uoyBw80sWSGhNfv7DohhVgE/1OYEcvGDqli9BGfD9pH6NnOJST52EW+AJzj+pH3yowmqcpDhKQ
-4p9DX//ZvpggkUG4WhxiaBxWNvtq44X6D3f17aEaIQG5ovkEH8RwB9mnPvXItL9WMJYyfq260zrN
-GCLruCXJ7IsXkowpDd/JbI3gCj4Q7Qy9iwLAY9XunanmNRGiZ/P2GVcasZyDNd/9Iig9yynFhoDd
-XMW82O3v/4jqxDnYPBKUoFK5oTg093WisfnIA6HhSSQRz/Py3k9eR1ZWbb1MSVxOiaTyrX+y/Lr1
-hvINjQA7Wl9GXbkeWFKepnaa2gjq5D8WOkmbvw==
+nv4cukWv6LCM0OL7IOu9xicHaEUFAF3/yLeDwDJlYZXmtLi4MjPTt265CoLIlTF4fXbhDr/GzJ44
+29iA1keaO9D6zJX3yFb1XRP9VClL/Iqe/OdveeDuulr2Gd4CvDr5Pqa4ssmKhuiErdpsbXcpyzSq
+zKJ5XOSQSzk/GnhkXApHobC1kz/5Ic0XVI9XXXIZFP5vbIG8Jmk3WtDMvsXPzhjTLl9XnihReko4
+NUgftbtLcWiHlkB8D3xSYm33Bai5DDBeYF+e4lZSGU+Txn6ocKn+LT+gWq6taK/V0X4kJL1HFUun
+f+yxtp+F4FkWtmhqs88Qx0c7eqeWeSjjPHyIyw==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

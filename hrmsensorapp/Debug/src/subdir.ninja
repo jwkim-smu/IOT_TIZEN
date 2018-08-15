@@ -11,3 +11,8 @@ build src/main_app.o.ast: build_c_fast_ast ../src/main_app.c
 build $sareportdir/src/main_app.o.xml: build_c_fast_sa src/main_app.o.ast || externalFnMap.txt
 build src/main_app.o.txt: build_c_api ../src/main_app.c 
 build $coveragedir/src/main_app.o.cov: build_cov ../src/main_app.c 
+build src/user_callbacks.o: build_c ../src/user_callbacks.c 
+build src/user_callbacks.o.ast: build_c_fast_ast ../src/user_callbacks.c 
+build $sareportdir/src/user_callbacks.o.xml: build_c_fast_sa src/user_callbacks.o.ast || externalFnMap.txt
+build src/user_callbacks.o.txt: build_c_api ../src/user_callbacks.c 
+build $coveragedir/src/user_callbacks.o.cov: build_cov ../src/user_callbacks.c 

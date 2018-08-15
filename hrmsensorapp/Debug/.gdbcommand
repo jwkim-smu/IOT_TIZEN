@@ -1,5 +1,5 @@
-set sysroot C:\tizen-studio\platforms\tizen-3.0\mobile\rootstraps\mobile-3.0-device.core
-set debug-file-directory C:\tizen-studio\platforms\tizen-3.0\mobile\rootstraps\mobile-3.0-device.core\usr\lib\debug
+set sysroot C:\tizen-studio\platforms\tizen-3.0\mobile\rootstraps\mobile-3.0-emulator.core
+set debug-file-directory C:\tizen-studio\platforms\tizen-3.0\mobile\rootstraps\mobile-3.0-emulator.core\usr\lib\debug
 set solib-search-path C:\Users\dlsrk\Desktop\종현\tizen_workspace\workspace\hrmsensorapp\Debug
-dir C:\tizen-studio\platforms\tizen-3.0\mobile\rootstraps\mobile-3.0-device.core\usr\src\debug
+dir C:\tizen-studio\platforms\tizen-3.0\mobile\rootstraps\mobile-3.0-emulator.core\usr\src\debug
 sharedlibrary
