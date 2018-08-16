@@ -179,12 +179,18 @@ void on_sensor_event(sensor_h sensor, sensor_event_s *event, void *user_data) {
 
 			SM(tmpLine3, 4428);
 
-			if (check_state1 == 1) {
+			if (check_state1 == 1 && check_state2 ==0) {
+				write_file(filepath, "\r\n");
+				write_file(filepath, ctime(&cur_time));
+				write_file(filepath, " ");
+				write_file(filepath, tmp3);
+			}
+			else if (check_state1 == 1 && check_state2 == 1) {
+				write_file(filepath, "\r\n");
 				write_file(filepath, ctime(&cur_time));
 				write_file(filepath, " ");
 				write_file(filepath, tmp3);
 				write_file(filepath, " ");
-
 			}
 		}
 //		char a[100], b[80] = "";
@@ -308,14 +314,13 @@ void on_sensor_event1(sensor_h sensor, sensor_event_s *event, void *user_data){
 			SM(tmpLine5, 4429);
 
 			if (check_state1 == 0 && check_state2 == 1) {
+				write_file(filepath, "\r\n");
 				write_file(filepath, ctime(&cur_time));
 				write_file(filepath, " ");
 				write_file(filepath, tmpLine5);
-				write_file(filepath, "\t");
 			} else if (check_state1 == 1 && check_state2 == 1) {
 				write_file(filepath, " ");
 				write_file(filepath, tmpLine5);
-				write_file(filepath, "\t");
 			}
 		}
 	}
