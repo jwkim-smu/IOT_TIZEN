@@ -20,20 +20,20 @@
 #include <Elementary.h>
 #include <app.h>
 #include <dlog.h>
-#include <efl_extension.h>
 #include <sensor.h>
+#include <storage.h>
 #include <system_info.h>
 
 #include <stdio.h>
-#include <storage.h>
 #include <time.h>
+#include <math.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+
 #include <Ecore.h>
 #include <unistd.h>
-
-
-#include <string.h>
-#include <stdlib.h>
+#include <efl_extension.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
@@ -45,9 +45,9 @@
 #include <curl/curl.h>
 #include <stdalign.h>
 #include <tizen.h>
-#include <stdbool.h>
 
 #define BUFLEN 200
+#define MAX_COUNT 24
 #define _PRINT_MSG_LOG_BUFFER_SIZE_ 1024
 #define PRINT_MSG(fmt, args...) do { char _log_[_PRINT_MSG_LOG_BUFFER_SIZE_]; \
     snprintf(_log_, _PRINT_MSG_LOG_BUFFER_SIZE_, fmt, ##args); _add_entry_text(_log_); } while (0)
@@ -85,19 +85,33 @@ Evas_Object *check1;
 Evas_Object *check2;
 
 char* tizenID(void);
+
 static void app_get_data(const char *res_file_in, char *res_path_out, int res_path_max);
 static void write_file(char* filepath, char* buf);
-float ran(int x);
+
+double sgn(double x);
+double* randomN();
+double laplace(double mu, double b, double ran);
+double privatize(double f, double sensitivity, double epsil, double ran);
+//float ran(int x);
+
 static void SM(char* msg, int port_num);
+//static void SM1(double* msg, int port_num);
+
+void hrm_average(int hour, double hrm);
 void on_sensor_event(sensor_h sensor, sensor_event_s *event, void *user_data);
 void on_sensor_event1(sensor_h sensor, sensor_event_s *event, void *user_data);
 void _add_entry_text(const char *text);
+
 Evas_Object *_new_button(appdata_s *ad, Evas_Object *display, char *name, void *cb);
 void create_sub_layout(void *data, Evas_Object *obj, void *event_info);
+static void app_get_resource(const char *edj_file_in, char *edj_path_out, int edj_path_max);
+void _animation_test_display(void *data, Evas_Object *obj, void *event_info);
 void create_second_layout(void *data, Evas_Object *obj, void *event_info);
 void _create_new_cd_display(appdata_s *ad, char *name, void *cb);
 static void create_base_gui(appdata_s *ad);
 static bool app_create(void *data);
+
 int main(int argc, char *argv[]);
 
 
@@ -109,5 +123,6 @@ int main(int argc, char *argv[]);
 #undef  LOG_TAG
 #endif
 #define LOG_TAG "sensor"
+
 
 #endif                           /* __MAIN_H__ */
